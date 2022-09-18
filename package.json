@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
+    "electron:build": "vue-cli-service electron:build --openssl-legacy-provider",
+    "electron:serve": "vue-cli-service electron:serve --openssl-legacy-provider",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
@@ -40,8 +40,8 @@
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "ts-loader": "~8.2.0",
     "typescript": "~4.5.5",
-    "vue-cli-plugin-electron-builder": "~2.1.1",
-    "webpack": "^5.74.0"
+    "vue-cli-plugin-electron-builder": "~2.1.1"
   }
 }
