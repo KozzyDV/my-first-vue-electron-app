@@ -5,8 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
@@ -15,6 +20,7 @@
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/electron-devtools-installer": "^2.2.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -25,6 +31,8 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "electron": "^20.1.4",
+    "electron-devtools-installer": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -32,6 +40,8 @@
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
-    "typescript": "~4.5.5"
+    "typescript": "~4.5.5",
+    "vue-cli-plugin-electron-builder": "~2.1.1",
+    "webpack": "^5.74.0"
   }
 }
